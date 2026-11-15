@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiyue (Frida) Chen</title>
+<meta name="description" content="Jiyue (Frida) Chen is a Computer Science undergraduate at Penn State. She studies how an agent can understand a person over time and use that understanding to decide how to act.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --text: #1d1c1a;
+    --muted: #66635d;
+    --rule: #e2dfd8;
+    --accent: #1f3a5f;
+    --accent-soft: #eef2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131517;
+      --text: #e9e6e0;
+      --muted: #a09c94;
+      --rule: #2b2e32;
+      --accent: #a9c3e6;
+      --accent-soft: #1c232c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 72px 20px 96px;
+  }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover, a:focus-visible { border-bottom-color: var(--accent); }
+
+  header h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 6vw, 2.9rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .role { color: var(--muted); margin: 0 0 22px; }
+  .statement {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 1.28rem;
+    line-height: 1.5;
+    margin: 0 0 26px;
+    padding-left: 16px;
+    border-left: 2px solid var(--accent);
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0; padding: 0; list-style: none; }
+  .links a {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.92rem;
+    background: var(--accent-soft);
+    border-radius: 999px;
+    border-bottom: none;
+  }
+  .links a:hover, .links a:focus-visible { outline: 1px solid var(--accent); }
+
+  section { margin-top: 56px; }
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 14px; }
+
+  .project { margin-bottom: 28px; }
+  .project h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 2px; }
+  .meta { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px; }
+
+  ol.pubs, ul.plain { list-style: none; margin: 0; padding: 0; }
+  ol.pubs li, ul.plain li { margin-bottom: 16px; }
+  .title { font-weight: 600; }
+  .venue { color: var(--muted); font-size: 0.95rem; }
+  .me { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+  footer { margin-top: 72px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Jiyue (Frida) Chen</h1>
+    <p class="role">Computer Science undergraduate, Penn State (Schreyer Honors College)</p>
+    <p class="statement">I study how an agent can understand a person over time and use that understanding to decide how to act.</p>
+    <ul class="links">
+      <li><a href="mailto:jxc6952@psu.edu">Email</a></li>
+      <li><a href="https://scholar.google.com/citations?user=n_zAjIcAAAAJ">Google Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/jiyue-chen-frida">LinkedIn</a></li>
+    </ul>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a Computer Science undergraduate at Penn State, moving to the University Park campus in Spring 2027. I work with <a href="https://ryanzhumich.github.io/">Dr. Rui Zhang</a> and <a href="https://www.wenpengyin.org/">Dr. Wenpeng Yin</a> on language agents, and with Dr. Omar Ashour on reinforcement learning for healthcare operations.</p>
+    <p>My current work is on persistent user state for LLM agents: how an agent can keep an estimate of a person that changes over many sessions, and when that estimate should change what the agent does.</p>
+    <p>I'm always happy to talk about research on long-term user modeling and human–agent collaboration. Feel free to reach out at <a href="mailto:jxc6952@psu.edu">jxc6952@psu.edu</a>.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="project">
+      <h3>LUSA: Longitudinal User State for Agents</h3>
+      <p class="meta">Penn State University Park · Apr 2026 – present · Advisors: Dr. Rui Zhang, Dr. Wenpeng Yin</p>
+      <p>A persistent user-state layer for long-horizon LLM agents. It keeps fast- and slow-changing state estimates for each user across sessions and uses them to condition memory retrieval. State tracking is formulated as Bayesian updating over Gaussian beliefs, where extraction confidence sets how strongly each observation updates the state. I lead the project as first author.</p>
+    </div>
+
+    <div class="project">
+      <h3>Reinforcement Learning for Emergency Department Overcrowding</h3>
+      <p class="meta">Penn State Behrend · Oct 2025 – present · Advisor: Dr. Omar Ashour</p>
+      <p>A discrete-event simulation of emergency department patient flow, with a reinforcement learning agent that adjusts triage and treatment-bed capacity from real-time queue states. In an extended simulation calibrated to 2022 NHAMCS data, an hourly RL agent that reallocates flexible staff and rooms cut waiting times by 4–10 minutes under 20–50% higher demand, without raising the share of patients who leave without being seen.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="pubs">
+      <li>
+        <div class="title">LUSA: a persistent user-state layer for long-horizon LLM agents</div>
+        <div><span class="me">Jiyue Chen</span>, Wenpeng Yin, Rui Zhang</div>
+        <div class="venue">Manuscript under review, ACL Rolling Review (October 2026 cycle)</div>
+      </li>
+      <li>
+        <div class="title">Using Reinforcement Learning to Predict and Mitigate Emergency Department Overcrowding</div>
+        <div><span class="me">Jiyue Chen</span>, Omar Ashour</div>
+        <div class="venue">IISE Annual Conference Proceedings, 2026, pp. 1–6. Presented at the IISE Annual Conference &amp; Expo, Arlington, TX, May 2026</div>
+      </li>
+      <!-- Optional: remove this entry if you prefer to list only current work -->
+      <li>
+        <div class="title">The Investigation on Anime-Themed Recommendation Systems</div>
+        <div><span class="me">Jiyue Chen</span></div>
+        <div class="venue">Highlights in Science, Engineering and Technology, 81, 121–131, 2024</div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="honors">
+    <h2>Honors</h2>
+    <ul class="plain">
+      <li>
+        <div>Excellence in Information Literacy Award, 1st Place</div>
+        <div class="venue">Penn State University Libraries, 2026</div>
+      </li>
+      <li>
+        <div>Undergraduate Research Grants ($1,200; $4,500)</div>
+        <div class="venue">Penn State Behrend, 2025 and 2026</div>
+      </li>
+      <li>
+        <div>Schreyer Honors College Scholar · Dean's List</div>
+        <div class="venue">The Pennsylvania State University</div>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    Last updated November 2026
+  </footer>
+
+</main>
+</body>
+</html>
